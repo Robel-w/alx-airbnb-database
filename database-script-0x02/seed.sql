@@ -29,7 +29,8 @@ INSERT INTO Review (review_id, property_id, user_id, rating, comment)
 VALUES
   (UUID(), (SELECT property_id FROM Property WHERE name = 'Sunny Villa'), (SELECT user_id FROM User WHERE email = 'robel.johnson@example.com'), 5, 'Amazing experience, the villa was perfect!'),
   (UUID(), (SELECT property_id FROM Property WHERE name = 'Mountain Retreat'), (SELECT user_id FROM User WHERE email = 'robel.johnson@example.com'), 4, 'Great cabin, but the Wi-Fi could be better.');
--- Inserting messages
+
+## Inserting messages
 INSERT INTO Message (message_id, sender_id, recipient_id, message_body)
 VALUES
   (UUID(), (SELECT user_id FROM User WHERE email = 'alice.johnson@example.com'), (SELECT user_id FROM User WHERE email = 'bob.smith@example.com'), 'Hi Bob, I loved the Sunny Villa! Could you share more details about the amenities?'),
