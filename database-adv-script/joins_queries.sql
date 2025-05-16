@@ -22,7 +22,8 @@ SELECT
 FROM
     properties
 LEFT JOIN
-    reviews ON reviews.property_id = properties.id;
+    reviews ON reviews.property_id = properties.id
+    ORDER BY properties.id ASC;
 
 --FULL OUTER JOIN
 SELECT 
